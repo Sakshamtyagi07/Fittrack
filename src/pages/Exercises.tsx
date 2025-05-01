@@ -7,8 +7,13 @@ import { Exercise, MuscleGroup, Equipment } from '../types';
 import { exercises } from '../data/exercises';
 
 const Exercises: React.FC = () => {
-  const [filteredExercises, setFilteredExercises] = useState<Exercise[]>(exercises);
+  const [filteredExercises, setFilteredExercises] = useState<Exercise[]>([]);
   const navigate = useNavigate();
+  
+  useEffect(() => {
+    // Initialize with all exercises
+    setFilteredExercises(exercises);
+  }, []);
   
   const handleFilterChange = (filters: {
     search: string;

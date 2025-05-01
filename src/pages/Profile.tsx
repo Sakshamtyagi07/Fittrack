@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PageContainer from '../components/layout/PageContainer';
 import ProfileForm from '../components/profile/ProfileForm';
-import { UserProfile } from '../types';
+import { UserProfile, FitnessGoal } from '../types';
 import { Card, CardHeader, CardContent } from '../components/ui/Card';
 import { Activity, TrendingUp, Award } from 'lucide-react';
 
@@ -12,7 +12,7 @@ const initialProfile: UserProfile = {
   height: 180,
   age: 32,
   gender: 'male',
-  fitnessGoal: 'buildMuscle'
+  fitnessGoal: FitnessGoal.BuildMuscle
 };
 
 const Profile: React.FC = () => {
